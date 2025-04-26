@@ -13,8 +13,10 @@ const JUMP_VELOCITY = -700.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
 func _process(delta: float):
-	if global_position.y >= get_viewport().get_visible_rect().size[1]:
-		global_position.y = get_viewport().get_visible_rect().size[1]	
+	if $VisibleOnScreenNotifier2D.is_on_screen():
+		print("yes")
+	else:
+		print("no")
 	#print(global_position.y)
 
 func _physics_process(delta: float) -> void:
