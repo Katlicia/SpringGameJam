@@ -3,7 +3,7 @@ extends Node2D
 @export var platform_scene : PackedScene
 @export var spawn_range_x : Vector2 = Vector2(100, 540)
 @export var spawn_distance_y : float = 150.0
-@export var max_x_distance : float = 300.0
+@export var max_x_distance : float = 400.0
 @export var min_x_distance : float = 150.0
 @export var player : NodePath
 @export var platform_margin_below : float = 300.0 # kamera altında ne kadar kalınca silinsin
@@ -11,10 +11,6 @@ extends Node2D
 var last_spawn_y = 350
 var last_spawn_x = 320
 var platforms = [] # oluşturulan platformları tutuyoruz
-
-func _ready():
-	for i in range(10):
-		spawn_platform()
 
 func _process(delta):
 	var player_node = get_node(player)
