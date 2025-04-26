@@ -12,18 +12,15 @@ const JUMP_VELOCITY = -700.0
 @onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
+func _ready():
+	$PlayerAnimation.play("idle")
+
 func _process(delta: float):
 	if $VisibleOnScreenNotifier2D.is_on_screen():
-		print("yes")
-	else:
-		print("no")
-	#print(global_position.y)
+		pass
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
-	
+
 	velocity.y += getGravity() * delta
 	
 	# Handle jump.
