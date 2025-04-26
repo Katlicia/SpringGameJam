@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d6sko05ab0db"]
+
+[ext_resource type="PackedScene" uid="uid://c0c2y21kf5hme" path="res://scenes/player.tscn" id="1_errlg"]
+[ext_resource type="Script" uid="uid://bqw2isucblvrv" path="res://scripts/test.gd" id="1_lpvoh"]
+[ext_resource type="Script" uid="uid://c2344i1hivti0" path="res://scripts/camera_2d.gd" id="4_74lek"]
+[ext_resource type="PackedScene" uid="uid://bha1156v5ofqa" path="res://scenes/platform.tscn" id="6_at5dv"]
+
+[node name="Test" type="Node2D"]
+rotation = 0.00138762
+script = ExtResource("1_lpvoh")
+platform_scene = ExtResource("6_at5dv")
+player = NodePath("Player")
+
+[node name="Player" parent="." instance=ExtResource("1_errlg")]
+position = Vector2(319.477, 343.557)
+rotation = -0.00911869
+jump_height = 200.0
+jump_time_to_peak = 0.8
+jump_time_to_descent = 0.8
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
+script = ExtResource("4_74lek")
+target = NodePath("../Player")
+
+[node name="Platform" parent="." instance=ExtResource("6_at5dv")]
+position = Vector2(319.555, 399.557)
+rotation = -0.00191138
+scale = Vector2(40, 5)
