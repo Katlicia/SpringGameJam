@@ -12,6 +12,8 @@ const JUMP_VELOCITY = -700.0
 @onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
+@onready var floor_ray_cast = $RayCast2D
+
 func _ready():
 	$PlayerAnimation.play("idle")
 
@@ -35,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	is_on_ice()
 	move_and_slide()
 
 func getGravity() -> float:
@@ -42,6 +45,10 @@ func getGravity() -> float:
 	
 func jump():
 	velocity.y = jump_velocity
+
+func is_on_ice():
+	var collider = floor_ray_cast.get_collider()
+	print(collider)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Player died")
