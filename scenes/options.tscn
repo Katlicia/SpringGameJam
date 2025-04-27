@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d026q77smtpkj"]
+[gd_scene load_steps=7 format=3 uid="uid://d026q77smtpkj"]
 
 [ext_resource type="Script" uid="uid://c6xe5xrw0k2c3" path="res://scenes/options.gd" id="1_1sggn"]
 [ext_resource type="Texture2D" uid="uid://kcgel6wusep4" path="res://assets/sprites/backgroundph.png" id="1_c2u1v"]
 [ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="2_2iy26"]
 [ext_resource type="PackedScene" uid="uid://cdww43opuxmae" path="res://scenes/volume_slider.tscn" id="2_yjkok"]
-[ext_resource type="Texture2D" uid="uid://cj70w0hp1671i" path="res://assets/sprites/exitph.png" id="4_kv8mn"]
+[ext_resource type="Texture2D" uid="uid://buib41118ho1l" path="res://assets/sprites/return-menu.png" id="5_e6vpq"]
+[ext_resource type="Texture2D" uid="uid://dm8pm1isifog3" path="res://assets/sprites/return-menu-hover.png" id="6_o7i7e"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -36,7 +37,6 @@ offset_left = 160.0
 offset_top = 153.0
 offset_right = 480.0
 offset_bottom = 169.0
-value = 0.5
 bus_name = "Music"
 
 [node name="SfxLabel" type="Label" parent="."]
@@ -62,7 +62,8 @@ offset_left = 260.0
 offset_top = 240.0
 offset_right = 380.0
 offset_bottom = 330.0
-texture_normal = ExtResource("4_kv8mn")
+texture_normal = ExtResource("5_e6vpq")
+texture_hover = ExtResource("6_o7i7e")
 ignore_texture_size = true
 stretch_mode = 0
 

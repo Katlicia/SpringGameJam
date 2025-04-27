@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var music: AudioStreamPlayer2D = $Camera2D/AudioStreamPlayer2D2
 @export var platform_scene : PackedScene
 @export var small_grass_scene : PackedScene
 @export var medium_grass_scene : PackedScene

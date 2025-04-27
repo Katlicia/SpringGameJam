@@ -36,6 +36,11 @@ jump_time_to_descent = 0.8
 script = ExtResource("4_74lek")
 target = NodePath("../Player")
 
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Camera2D"]
+scale = Vector2(1, 1)
+stream = ExtResource("12_ghpyy")
+bus = &"Music"
+
 [node name="Platform" parent="." instance=ExtResource("6_at5dv")]
 position = Vector2(319.555, 399.557)
 rotation = -0.00191138
@@ -43,7 +48,3 @@ scale = Vector2(40, 5)
 
 [node name="IcePlatform" parent="." instance=ExtResource("5_j5jx5")]
 position = Vector2(447.464, 334.379)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("12_ghpyy")
-bus = &"Music"
