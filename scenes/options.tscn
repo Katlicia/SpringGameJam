@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://d026q77smtpkj"]
+
+[ext_resource type="Texture2D" uid="uid://kcgel6wusep4" path="res://assets/sprites/backgroundph.png" id="1_c2u1v"]
+[ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="2_2iy26"]
+[ext_resource type="PackedScene" uid="uid://cdww43opuxmae" path="res://scenes/volume_slider.tscn" id="2_yjkok"]
+[ext_resource type="Texture2D" uid="uid://cj70w0hp1671i" path="res://assets/sprites/exitph.png" id="4_kv8mn"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_c2u1v")
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 160.0
+offset_top = 126.0
+offset_right = 480.0
+offset_bottom = 149.0
+text = "Music Volume"
+label_settings = ExtResource("2_2iy26")
+
+[node name="Music" parent="." instance=ExtResource("2_yjkok")]
+layout_mode = 2
+offset_left = 160.0
+offset_top = 153.0
+offset_right = 480.0
+offset_bottom = 169.0
+value = 0.0
+bus_name = "Music"
+
+[node name="SfxLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 160.0
+offset_top = 173.0
+offset_right = 480.0
+offset_bottom = 196.0
+text = "SFX Volume"
+label_settings = ExtResource("2_2iy26")
+
+[node name="Sfx" parent="." instance=ExtResource("2_yjkok")]
+layout_mode = 2
+offset_left = 160.0
+offset_top = 200.0
+offset_right = 480.0
+offset_bottom = 216.0
+bus_name = "Sfx"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 240.0
+offset_right = 380.0
+offset_bottom = 330.0
+texture_normal = ExtResource("4_kv8mn")
+ignore_texture_size = true
+stretch_mode = 0
