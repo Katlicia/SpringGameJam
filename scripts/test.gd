@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @export var platform_scene : PackedScene
 @export var small_grass_scene : PackedScene
 @export var medium_grass_scene : PackedScene
@@ -40,6 +41,7 @@ func _ready():
 	index_begin = 0
 	index_last = 2
 	change_platform = false
+	music.play()
 
 func _process(delta):
 	var player_node = get_node(player)

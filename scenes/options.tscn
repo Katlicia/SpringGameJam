@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://d026q77smtpkj"]
+[gd_scene load_steps=6 format=3 uid="uid://d026q77smtpkj"]
 
+[ext_resource type="Script" uid="uid://c6xe5xrw0k2c3" path="res://scenes/options.gd" id="1_1sggn"]
 [ext_resource type="Texture2D" uid="uid://kcgel6wusep4" path="res://assets/sprites/backgroundph.png" id="1_c2u1v"]
 [ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="2_2iy26"]
 [ext_resource type="PackedScene" uid="uid://cdww43opuxmae" path="res://scenes/volume_slider.tscn" id="2_yjkok"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1sggn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -34,7 +36,7 @@ offset_left = 160.0
 offset_top = 153.0
 offset_right = 480.0
 offset_bottom = 169.0
-value = 0.0
+value = 0.5
 bus_name = "Music"
 
 [node name="SfxLabel" type="Label" parent="."]
@@ -63,3 +65,5 @@ offset_bottom = 330.0
 texture_normal = ExtResource("4_kv8mn")
 ignore_texture_size = true
 stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
