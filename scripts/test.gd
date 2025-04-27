@@ -10,15 +10,16 @@ extends Node2D
 @export var large_ice_scene : PackedScene
 
 @export var spawn_range_x : Vector2 = Vector2(100, 540)
-@export var spawn_distance_y : float = 150.0
+@export var spawn_distance_y : float = 100.0
 @export var max_x_distance : float = 400.0
 @export var min_x_distance : float = 150.0
 @export var player : NodePath
 @export var platform_margin_below : float = 300.0
 
 @onready var label_node = $Camera2D/Label
+@onready var parallax_node = $Parallax
 
-var last_spawn_y = 350
+var last_spawn_y = 400
 var last_spawn_x = 320
 var platforms = []
 var scenes = []
@@ -46,6 +47,7 @@ func _ready():
 	music.play()
 
 func _process(delta):
+	check_platform_num()
 	var player_node = get_node(player)
 	var player_y = player_node.global_position.y
 	
@@ -61,8 +63,7 @@ func _process(delta):
 		platforms.erase(platform)
 		platform.queue_free()
 	
-	if !change_platform:
-		check_platform_num()
+	if change_platform:
 		index_begin = 3
 		index_last = 5
 	
@@ -91,10 +92,10 @@ func spawn_platform():
 	
 
 func check_platform_num():
-	if platform_counter >= 200:
+	if platform_counter >= 100:
 		change_platform = true
+		parallax_node.get_node("ParallaxBackground/ParallaxLayer2").visible = true
 		return true
 		
 func update_point():
 	label_node.set_text(str(platform_counter - 4))
-	

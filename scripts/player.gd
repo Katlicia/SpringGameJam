@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 250.0
+const SPEED = 260.0
 const JUMP_VELOCITY = -700.0
 
 @onready var sfx_frog: AudioStreamPlayer2D = $AudioStreamPlayer2D

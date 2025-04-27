@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d6sko05ab0db"]
+[gd_scene load_steps=16 format=3 uid="uid://d6sko05ab0db"]
 
 [ext_resource type="PackedScene" uid="uid://c0c2y21kf5hme" path="res://scenes/player.tscn" id="1_errlg"]
 [ext_resource type="Script" uid="uid://bqw2isucblvrv" path="res://scripts/test.gd" id="1_lpvoh"]
@@ -13,6 +13,10 @@
 [ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="12_44saj"]
 [ext_resource type="AudioStream" uid="uid://dt2p13x7fg2ii" path="res://assets/sound/music.mp3" id="12_ghpyy"]
 [ext_resource type="PackedScene" uid="uid://doro10kjyjfw6" path="res://scenes/parallax.tscn" id="13_44saj"]
+[ext_resource type="Texture2D" uid="uid://0buxkedtnf45" path="res://assets/sprites/base_tree.png" id="14_7mbro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mbro"]
+size = Vector2(656.981, 22.9903)
 
 [node name="Test" type="Node2D"]
 rotation = 0.00138762
@@ -26,8 +30,12 @@ medium_ice_scene = ExtResource("7_ghpyy")
 large_ice_scene = ExtResource("8_44saj")
 player = NodePath("Player")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+texture = ExtResource("14_7mbro")
+
 [node name="Player" parent="." instance=ExtResource("1_errlg")]
-position = Vector2(319.477, 343.557)
+position = Vector2(320, 439.557)
 rotation = -0.00911869
 jump_height = 200.0
 jump_time_to_peak = 0.8
@@ -48,10 +56,13 @@ offset_right = -275.327
 offset_bottom = -210.229
 text = "10"
 label_settings = ExtResource("12_44saj")
+metadata/_edit_use_anchors_ = true
 
-[node name="Platform" parent="." instance=ExtResource("6_at5dv")]
-position = Vector2(319.555, 399.557)
-rotation = -0.00191138
-scale = Vector2(40, 5)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(317.648, 466.56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7.50903, 1.49515)
+shape = SubResource("RectangleShape2D_7mbro")
 
 [node name="Parallax" parent="." instance=ExtResource("13_44saj")]

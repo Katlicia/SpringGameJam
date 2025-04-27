@@ -9,7 +9,7 @@ var res
 func _ready():
 	fixed_x_position = target.global_position.x
 	res = get_viewport().get_visible_rect().size
-	global_position.y = 200
+	global_position.y = 240
 
 func _process(delta):
 	if target:
