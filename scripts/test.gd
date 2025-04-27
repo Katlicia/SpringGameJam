@@ -85,7 +85,6 @@ func spawn_platform():
 
 	last_spawn_y = y
 	last_spawn_x = x
-	print(random_num)
 
 func check_platform_num():
 	if platform_counter >= 10:
