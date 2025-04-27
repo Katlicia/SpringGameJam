@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -700.0
 
 @onready var sfx_frog: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var animation_tree: AnimationTree = $AnimationTree
 
 @export var jump_height : float
 @export var jump_time_to_peak : float
@@ -23,7 +24,8 @@ const JUMP_VELOCITY = -700.0
 var pitch_randomiser
 
 func _ready():
-	$PlayerAnimation.play("idle")
+	##$PlayerAnimation.play("idle")
+	animation_tree.active = true
 
 func _process(delta: float):
 	if $VisibleOnScreenNotifier2D.is_on_screen():
@@ -48,8 +50,30 @@ func _physics_process(delta: float) -> void:
 		_movement_on_ice(direction)
 	else:
 		_normal_movement(direction)
-
+	var input_x = Input.get_axis("left", "right")	
+	if input_x < 0:
+		input_x = -1
+	elif input_x > 0:
+		input_x = 1
+	if input_x != 0:
+		animation_tree.set("parameters/Jump/blend_position", input_x)
+		animation_tree.set("parameters/Fall/blend_position", input_x)
+	var velocity_y = velocity.y
+	if velocity_y < 0:
+		velocity_y = -1
+	elif velocity_y > 0:
+		velocity_y = 1
+	else:
+		pass
+	if velocity_y == 1:
+		animation_tree["parameters/playback"].travel("Fall")
+	elif velocity_y == -1:
+		animation_tree["parameters/playback"].travel("Jump")
+	if is_on_floor():
+		animation_tree["parameters/playback"].travel("Idle")
+		
 	move_and_slide()
+	
 
 func getGravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity

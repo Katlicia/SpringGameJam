@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ral2cbnwawil"]
 
-[ext_resource type="Texture2D" uid="uid://d4kygnapbw4a" path="res://assets/tiles/large-grass.png" id="1_cm2jr"]
+[ext_resource type="Texture2D" uid="uid://dj68v131ohtrw" path="res://assets/sprites/long-grass.png" id="1_cm2jr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_difec"]
 size = Vector2(64, 16)
