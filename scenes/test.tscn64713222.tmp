@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d6sko05ab0db"]
+[gd_scene load_steps=14 format=3 uid="uid://d6sko05ab0db"]
 
 [ext_resource type="PackedScene" uid="uid://c0c2y21kf5hme" path="res://scenes/player.tscn" id="1_errlg"]
 [ext_resource type="Script" uid="uid://bqw2isucblvrv" path="res://scripts/test.gd" id="1_lpvoh"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cpppfy5mh65yf" path="res://scenes/platforms/large-ice.tscn" id="8_44saj"]
 [ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="12_44saj"]
 [ext_resource type="AudioStream" uid="uid://dt2p13x7fg2ii" path="res://assets/sound/music.mp3" id="12_ghpyy"]
+[ext_resource type="Script" uid="uid://cg0p5ftkmdfcw" path="res://scenes/label.gd" id="13_44saj"]
 
 [node name="Test" type="Node2D"]
 rotation = 0.00138762
@@ -47,6 +48,7 @@ offset_right = -275.327
 offset_bottom = -210.229
 text = "10"
 label_settings = ExtResource("12_44saj")
+script = ExtResource("13_44saj")
 
 [node name="Platform" parent="." instance=ExtResource("6_at5dv")]
 position = Vector2(319.555, 399.557)

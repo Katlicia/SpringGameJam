@@ -16,6 +16,8 @@ extends Node2D
 @export var player : NodePath
 @export var platform_margin_below : float = 300.0
 
+@onready var label_node = $Camera2D/Label
+
 var last_spawn_y = 350
 var last_spawn_x = 320
 var platforms = []
@@ -59,10 +61,12 @@ func _process(delta):
 		platforms.erase(platform)
 		platform.queue_free()
 	
-	if change_platform:
+	if !change_platform:
 		check_platform_num()
 		index_begin = 3
 		index_last = 5
+	
+	update_point()
 
 func spawn_platform():
 	random_num = randi_range(index_begin, index_last)
@@ -84,9 +88,13 @@ func spawn_platform():
 
 	last_spawn_y = y
 	last_spawn_x = x
-	print(platform_counter)
+	
 
 func check_platform_num():
 	if platform_counter >= 200:
 		change_platform = true
 		return true
+		
+func update_point():
+	label_node.set_text(str(platform_counter - 4))
+	

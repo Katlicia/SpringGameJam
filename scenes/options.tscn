@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d026q77smtpkj"]
 
-[ext_resource type="Script" uid="uid://c6xe5xrw0k2c3" path="res://scenes/options.gd" id="1_1sggn"]
+[ext_resource type="Script" uid="uid://c6xe5xrw0k2c3" path="res://scripts/options.gd" id="1_1sggn"]
 [ext_resource type="Texture2D" uid="uid://kcgel6wusep4" path="res://assets/sprites/backgroundph.png" id="1_c2u1v"]
 [ext_resource type="LabelSettings" uid="uid://b7ued43vxy6v4" path="res://assets/OptionsLabelSettings.tres" id="2_2iy26"]
 [ext_resource type="PackedScene" uid="uid://cdww43opuxmae" path="res://scenes/volume_slider.tscn" id="2_yjkok"]
@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_1sggn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -26,8 +27,8 @@ texture = ExtResource("1_c2u1v")
 layout_mode = 2
 offset_left = 160.0
 offset_top = 126.0
-offset_right = 480.0
-offset_bottom = 149.0
+offset_right = 2285.0
+offset_bottom = 521.833
 text = "Music Volume"
 label_settings = ExtResource("2_2iy26")
 

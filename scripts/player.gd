@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 250.0
 const JUMP_VELOCITY = -700.0
 
 @onready var sfx_frog: AudioStreamPlayer2D = $AudioStreamPlayer2D
@@ -28,10 +28,13 @@ func _ready():
 	animation_tree.active = true
 
 func _process(delta: float):
-	if $VisibleOnScreenNotifier2D.is_on_screen():
-		pass
+	if !$VisibleOnScreenNotifier2D.is_on_screen():
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _physics_process(delta: float) -> void:
+
+	if global_position.x > 620:
+		global_position.x = 620
 
 	velocity.y += getGravity() * delta
 	
