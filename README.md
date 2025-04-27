@@ -2,4 +2,4 @@ Frosch Jumper is a 2d endless jumper game made with Godot for Spring Game Jam in
 Play on itch.io: https://katlicia.itch.io/frocsh-jumper
 Or download the exe under the releases
 
-(assets/sprites/Screenshot_1.png)
+![Game Screenshot](assets/sprites/Screenshot_1.png)
