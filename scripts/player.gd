@@ -34,16 +34,15 @@ func _physics_process(delta: float) -> void:
 	velocity.y += getGravity() * delta
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jump()
 		pitch_randomiser = randf_range(0.90, 1.10)
 		sfx_frog.pitch_scale = pitch_randomiser
-		print(pitch_randomiser)
 		sfx_frog.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left", "right")
 	
 	if is_on_ice():
 		_movement_on_ice(direction)
@@ -80,4 +79,4 @@ func _normal_movement(direction):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("Player died")
+	pass
