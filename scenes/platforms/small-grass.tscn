@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsasl4vg6wpgg"]
+
+[ext_resource type="Texture2D" uid="uid://dfvwj56kqgocv" path="res://assets/tiles/small-grass.png" id="1_koxkt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ecwu"]
+size = Vector2(32, 16)
+
+[node name="Small-grass" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_koxkt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3ecwu")
+one_way_collision = true

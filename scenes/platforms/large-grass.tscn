@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ral2cbnwawil"]
+
+[ext_resource type="Texture2D" uid="uid://d4kygnapbw4a" path="res://assets/tiles/large-grass.png" id="1_cm2jr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_difec"]
+size = Vector2(64, 16)
+
+[node name="Large-grass" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cm2jr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_difec")
+one_way_collision = true

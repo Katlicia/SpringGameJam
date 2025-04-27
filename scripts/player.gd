@@ -14,6 +14,10 @@ const JUMP_VELOCITY = -700.0
 
 @onready var floor_ray_cast = $RayCast2D
 
+@export var accelerationValue = 0.01
+@export var slideValue = 0.01
+@export var fullStopValue = 15
+
 func _ready():
 	$PlayerAnimation.play("idle")
 
@@ -32,12 +36,12 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	
+	if is_on_ice():
+		_movement_on_ice(direction)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		_normal_movement(direction)
 
-	is_on_ice()
 	move_and_slide()
 
 func getGravity() -> float:
@@ -48,7 +52,24 @@ func jump():
 
 func is_on_ice():
 	var collider = floor_ray_cast.get_collider()
-	print(collider)
+	if not collider: return false
+	
+	if collider.name == "SmallIce" or collider.name == "MediumIce" or collider.name == "LargeIce":
+		return true
 
+func _movement_on_ice(direction):
+	if direction:
+		velocity.x = lerp(velocity.x, direction * SPEED, accelerationValue)
+	else:
+		velocity.x = lerp(velocity.x, 0.0, slideValue)
+		if velocity.x < fullStopValue and velocity.x > -fullStopValue:
+			velocity.x = 0
+
+func _normal_movement(direction):
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Player died")

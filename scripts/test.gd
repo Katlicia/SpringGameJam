@@ -1,6 +1,13 @@
 extends Node2D
 
 @export var platform_scene : PackedScene
+@export var small_grass_scene : PackedScene
+@export var medium_grass_scene : PackedScene
+@export var large_grass_scene : PackedScene
+@export var small_ice_scene : PackedScene
+@export var medium_ice_scene : PackedScene
+@export var large_ice_scene : PackedScene
+
 @export var spawn_range_x : Vector2 = Vector2(100, 540)
 @export var spawn_distance_y : float = 150.0
 @export var max_x_distance : float = 400.0
@@ -11,6 +18,28 @@ extends Node2D
 var last_spawn_y = 350
 var last_spawn_x = 320
 var platforms = [] # oluşturulan platformları tutuyoruz
+var scenes = []
+
+var random_num
+
+var platform_counter : int
+
+var index_begin : int
+var index_last : int
+
+var change_platform : bool
+
+func _ready():
+	scenes.append(small_grass_scene)
+	scenes.append(medium_grass_scene)
+	scenes.append(large_grass_scene)
+	scenes.append(small_ice_scene)
+	scenes.append(medium_ice_scene)
+	scenes.append(large_ice_scene)
+	platform_counter = 0
+	index_begin = 0
+	index_last = 2
+	change_platform = false
 
 func _process(delta):
 	var player_node = get_node(player)
@@ -30,9 +59,16 @@ func _process(delta):
 	for platform in to_remove:
 		platforms.erase(platform)
 		platform.queue_free()
+	
+	if !change_platform:
+		check_platform_num()
+		index_begin = 3
+		index_last = 5
 
 func spawn_platform():
-	var platform = platform_scene.instantiate()
+	random_num = randi_range(index_begin, index_last)
+	var platform = scenes[random_num].instantiate()
+	platform_counter += 1
 	add_child(platform)
 	platforms.append(platform)
 
@@ -49,3 +85,9 @@ func spawn_platform():
 
 	last_spawn_y = y
 	last_spawn_x = x
+	print(random_num)
+
+func check_platform_num():
+	if platform_counter >= 10:
+		change_platform = true
+		return true

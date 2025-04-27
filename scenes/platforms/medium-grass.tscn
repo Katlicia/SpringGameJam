@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c61kfxwmfoa53"]
+
+[ext_resource type="Texture2D" uid="uid://cf4k3ilkdbw2g" path="res://assets/tiles/medium-grass.png" id="1_qiwq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e5ko"]
+size = Vector2(48, 16)
+
+[node name="Medium-grass" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qiwq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0e5ko")
+one_way_collision = true

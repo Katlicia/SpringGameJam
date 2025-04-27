@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpppfy5mh65yf"]
+
+[ext_resource type="Texture2D" uid="uid://84262ijjnna0" path="res://assets/tiles/large-ice.png" id="1_w21ya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j77ww"]
+size = Vector2(64, 16)
+
+[node name="LargeIce" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w21ya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j77ww")
+one_way_collision = true

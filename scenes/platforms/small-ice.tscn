@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bos1rk2g5f1nl"]
+
+[ext_resource type="Texture2D" uid="uid://dnr7xr31yujtt" path="res://assets/tiles/small-ice.png" id="1_tmc20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50lk5"]
+size = Vector2(32, 16)
+
+[node name="SmallIce" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmc20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_50lk5")
+one_way_collision = true
