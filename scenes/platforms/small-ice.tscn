@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bos1rk2g5f1nl"]
 
-[ext_resource type="Texture2D" uid="uid://dnr7xr31yujtt" path="res://assets/tiles/small-ice.png" id="1_tmc20"]
+[ext_resource type="Texture2D" uid="uid://reohfoy4ovui" path="res://assets/sprites/small-ice.png" id="1_tmc20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50lk5"]
 size = Vector2(32, 16)
