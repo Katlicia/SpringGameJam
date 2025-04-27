@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf4k3ilkdbw2g"
-path="res://.godot/imported/medium-grass.png-a40108f5ee085d451239929515b87a44.ctex"
+uid="uid://dro5dds2pbim4"
+path="res://.godot/imported/quit-button-hover2.png-26f1556a0a8143d189772f5e8c028c9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/medium-grass.png"
-dest_files=["res://.godot/imported/medium-grass.png-a40108f5ee085d451239929515b87a44.ctex"]
+source_file="res://assets/buttons/quit-button-hover2.png"
+dest_files=["res://.godot/imported/quit-button-hover2.png-26f1556a0a8143d189772f5e8c028c9f.ctex"]
 
 [params]
 

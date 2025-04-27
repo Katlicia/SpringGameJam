@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfvwj56kqgocv"
-path="res://.godot/imported/small-grass.png-23eea0c5ade39378ea409af147b8360d.ctex"
+uid="uid://vnw7d1803bja"
+path="res://.godot/imported/quit-button.png-61336d672f6be378b4416ef269d52455.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/small-grass.png"
-dest_files=["res://.godot/imported/small-grass.png-23eea0c5ade39378ea409af147b8360d.ctex"]
+source_file="res://assets/buttons/quit-button.png"
+dest_files=["res://.godot/imported/quit-button.png-61336d672f6be378b4416ef269d52455.ctex"]
 
 [params]
 

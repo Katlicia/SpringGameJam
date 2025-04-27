@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh3q1asg1i3db"
-path="res://.godot/imported/righttile-ice.png-f6f4118951e7c1b995d38931619e18b6.ctex"
+uid="uid://c8nlgyqnr8rv1"
+path="res://.godot/imported/return-menu-hover.png-4f0015d5432ae90b1c4dda2fc80db1b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/righttile-ice.png"
-dest_files=["res://.godot/imported/righttile-ice.png-f6f4118951e7c1b995d38931619e18b6.ctex"]
+source_file="res://assets/buttons/return-menu-hover.png"
+dest_files=["res://.godot/imported/return-menu-hover.png-4f0015d5432ae90b1c4dda2fc80db1b7.ctex"]
 
 [params]
 

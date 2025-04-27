@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddvgdtcfbb6el"
-path="res://.godot/imported/midtile.png-8dbc0794baa77626be99ceb8c34000bf.ctex"
+uid="uid://bfc7lobm6npxs"
+path="res://.godot/imported/plcaeholder.png-269ed092c3d47528be4574195d108b26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/midtile.png"
-dest_files=["res://.godot/imported/midtile.png-8dbc0794baa77626be99ceb8c34000bf.ctex"]
+source_file="res://assets/buttons/plcaeholder.png"
+dest_files=["res://.godot/imported/plcaeholder.png-269ed092c3d47528be4574195d108b26.ctex"]
 
 [params]
 

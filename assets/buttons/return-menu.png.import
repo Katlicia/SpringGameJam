@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfvvibm258gwg"
-path="res://.godot/imported/lefttile-ice.png-b8c559e72c29a41fa1ec0b650cef0a4b.ctex"
+uid="uid://v5pfdcnnqc5l"
+path="res://.godot/imported/return-menu.png-39a135d287e186dc6ec007781c2c7074.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/lefttile-ice.png"
-dest_files=["res://.godot/imported/lefttile-ice.png-b8c559e72c29a41fa1ec0b650cef0a4b.ctex"]
+source_file="res://assets/buttons/return-menu.png"
+dest_files=["res://.godot/imported/return-menu.png-39a135d287e186dc6ec007781c2c7074.ctex"]
 
 [params]
 

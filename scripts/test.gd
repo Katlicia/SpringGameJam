@@ -14,11 +14,11 @@ extends Node2D
 @export var max_x_distance : float = 400.0
 @export var min_x_distance : float = 150.0
 @export var player : NodePath
-@export var platform_margin_below : float = 300.0 # kamera altında ne kadar kalınca silinsin
+@export var platform_margin_below : float = 300.0
 
 var last_spawn_y = 350
 var last_spawn_x = 320
-var platforms = [] # oluşturulan platformları tutuyoruz
+var platforms = []
 var scenes = []
 
 var random_num
@@ -47,22 +47,19 @@ func _process(delta):
 	var player_node = get_node(player)
 	var player_y = player_node.global_position.y
 	
-	# Sonsuz üretim: üstte yeni platform oluştur
 	while last_spawn_y > player_y - 500:
 		spawn_platform()
 
-	# Altında kalan platformları bul
 	var to_remove = []
 	for platform in platforms:
 		if is_instance_valid(platform) and platform.global_position.y > player_y + platform_margin_below:
 			to_remove.append(platform)
 	
-	# Sonra temizle
 	for platform in to_remove:
 		platforms.erase(platform)
 		platform.queue_free()
 	
-	if !change_platform:
+	if change_platform:
 		check_platform_num()
 		index_begin = 3
 		index_last = 5
@@ -87,8 +84,9 @@ func spawn_platform():
 
 	last_spawn_y = y
 	last_spawn_x = x
+	print(platform_counter)
 
 func check_platform_num():
-	if platform_counter >= 10:
+	if platform_counter >= 200:
 		change_platform = true
 		return true

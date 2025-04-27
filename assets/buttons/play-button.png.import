@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnr7xr31yujtt"
-path="res://.godot/imported/small-ice.png-7abb9bc1c83d7b86ae12d112593e8009.ctex"
+uid="uid://b2i25j6gj57oh"
+path="res://.godot/imported/play-button.png-87ebf70fe1508ad71dfa7a159851f4bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/small-ice.png"
-dest_files=["res://.godot/imported/small-ice.png-7abb9bc1c83d7b86ae12d112593e8009.ctex"]
+source_file="res://assets/buttons/play-button.png"
+dest_files=["res://.godot/imported/play-button.png-87ebf70fe1508ad71dfa7a159851f4bd.ctex"]
 
 [params]
 

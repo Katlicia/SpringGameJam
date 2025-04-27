@@ -1,17 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://d6sko05ab0db"]
+[gd_scene load_steps=12 format=3 uid="uid://d6sko05ab0db"]
 
 [ext_resource type="PackedScene" uid="uid://c0c2y21kf5hme" path="res://scenes/player.tscn" id="1_errlg"]
 [ext_resource type="Script" uid="uid://bqw2isucblvrv" path="res://scripts/test.gd" id="1_lpvoh"]
 [ext_resource type="PackedScene" uid="uid://bsasl4vg6wpgg" path="res://scenes/platforms/small-grass.tscn" id="3_jcd4p"]
 [ext_resource type="Script" uid="uid://c2344i1hivti0" path="res://scripts/camera_2d.gd" id="4_74lek"]
 [ext_resource type="PackedScene" uid="uid://c61kfxwmfoa53" path="res://scenes/platforms/medium-grass.tscn" id="4_uacia"]
-[ext_resource type="PackedScene" uid="uid://dve2u3n1dyuid" path="res://scenes/ice_platform.tscn" id="5_j5jx5"]
 [ext_resource type="PackedScene" uid="uid://ral2cbnwawil" path="res://scenes/platforms/large-grass.tscn" id="5_yk7ts"]
 [ext_resource type="PackedScene" uid="uid://bos1rk2g5f1nl" path="res://scenes/platforms/small-ice.tscn" id="6_ajshl"]
 [ext_resource type="PackedScene" uid="uid://bha1156v5ofqa" path="res://scenes/platform.tscn" id="6_at5dv"]
 [ext_resource type="PackedScene" uid="uid://cicfds5f3nar4" path="res://scenes/platforms/medium-ice.tscn" id="7_ghpyy"]
 [ext_resource type="PackedScene" uid="uid://cpppfy5mh65yf" path="res://scenes/platforms/large-ice.tscn" id="8_44saj"]
-[ext_resource type="AudioStream" uid="uid://dt2p13x7fg2ii" path="res://assets/al knk bu daha iyi oldu.mp3" id="12_ghpyy"]
+[ext_resource type="AudioStream" uid="uid://dt2p13x7fg2ii" path="res://assets/sound/music.mp3" id="12_ghpyy"]
 
 [node name="Test" type="Node2D"]
 rotation = 0.00138762
@@ -44,6 +43,3 @@ bus = &"Music"
 position = Vector2(319.555, 399.557)
 rotation = -0.00191138
 scale = Vector2(40, 5)
-
-[node name="IcePlatform" parent="." instance=ExtResource("5_j5jx5")]
-position = Vector2(447.464, 334.379)

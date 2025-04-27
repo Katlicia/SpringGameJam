@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://84262ijjnna0"
-path="res://.godot/imported/large-ice.png-6c2a3660044f6343396a73ddef543d86.ctex"
+uid="uid://gr1k4suy6nmo"
+path="res://.godot/imported/settings-button-hover.png-5ee2973c92631f8921506197667fd1d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/large-ice.png"
-dest_files=["res://.godot/imported/large-ice.png-6c2a3660044f6343396a73ddef543d86.ctex"]
+source_file="res://assets/buttons/settings-button-hover.png"
+dest_files=["res://.godot/imported/settings-button-hover.png-5ee2973c92631f8921506197667fd1d1.ctex"]
 
 [params]
 

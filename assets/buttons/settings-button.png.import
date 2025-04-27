@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w4sehgxe81nw"
-path="res://.godot/imported/righttile.png-04ffe4ffa1f5b64b4c0cd8a54cea9dc5.ctex"
+uid="uid://caqnq5vlfi14e"
+path="res://.godot/imported/settings-button.png-8bdedfcefbc94a0e532a6a42c32b6e04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/righttile.png"
-dest_files=["res://.godot/imported/righttile.png-04ffe4ffa1f5b64b4c0cd8a54cea9dc5.ctex"]
+source_file="res://assets/buttons/settings-button.png"
+dest_files=["res://.godot/imported/settings-button.png-8bdedfcefbc94a0e532a6a42c32b6e04.ctex"]
 
 [params]
 
